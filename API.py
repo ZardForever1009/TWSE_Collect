@@ -1,9 +1,9 @@
 from termcolor import colored
 import os
 
-from GetInput import GetInput
+from UserInterface import GetInput
 
-from GetInput import GetInput
+from UserInterface import GetInput
 
 UI = GetInput("00000000", "00000000")
 UI.input_reminder()

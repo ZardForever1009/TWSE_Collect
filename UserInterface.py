@@ -13,7 +13,7 @@ class GetInput:
 
     def input_reminder(self):
         os.system('color')
-        print(colored("\n=====TWSE API Stock Data Collector=====\n", 'yellow', attrs=['bold']))
+        print(colored("\n=====Yahoo Finance API Stock Data Collector=====\n", 'yellow', attrs=['bold']))
         print(colored("\n>> Date example: 2020/1/8", 'green', attrs=['bold']))
         print(colored(">> Date gap should be Monday to Friday\n", 'green', attrs=['bold']))
         os.system("pause")
