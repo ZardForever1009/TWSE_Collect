@@ -4,10 +4,16 @@ import os
 
 class API:
 
-    def __init__(self, start_date, end_date, title):
+    def __init__(self, start_date, end_date, title, stock_count):
         self.start_date = start_date
         self.end_date = end_date
         self.title = title
+        self.stock_count = stock_count
+
+    def show_title(self):
+        import os
+        os.system('color')
+        print(colored(self.title, 'yellow', attrs=['bold']))
 
     # Get date input from user
     def get_valid_date(self):
@@ -40,7 +46,7 @@ class API:
             else:
                 input_check = False
                 from datetime import datetime
-                self.start_date = str(start_year)+'-'+str(start_month)+'-'+str(start_day)
+                self.start_date = str(start_year) + '-' + str(start_month) + '-' + str(start_day)
         # end date input
         import datetime
         input_check = True
@@ -72,14 +78,32 @@ class API:
                 print(colored(">> Error: date gap not a week\n", 'red'))
             else:
                 input_check = False
-                from datetime import datetime,timedelta
+                from datetime import datetime, timedelta
                 end = end + timedelta(days=1)
                 end_year = end.year
                 end_month = end.month
                 end_day = end.day
-                self.end_date = str(end_year)+'-'+str(end_month)+'-'+str(end_day)
+                self.end_date = str(end_year) + '-' + str(end_month) + '-' + str(end_day)
 
-    def show_title(self):
-        import os
-        os.system('color')
-        print(colored(self.title, 'yellow', attrs=['bold']))
+    # get full TWSE stock list
+    def get_stock_info(self):
+        import twstock
+        i = 1
+        stock_no = open("one.csv", "w")
+        for code in range(0000, 10000):
+            if str(code) in twstock.codes:
+                print(str(code))
+                i += 1
+            else:
+                continue
+        stock_no.close()
+
+
+    def get_stock_price(self):
+        import twstock
+        stock = twstock.Stock("1592")
+        if stock.price==[]:
+            print("fail")
+        else:
+            print(stock.price)
+
