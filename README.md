@@ -2,7 +2,7 @@
 --National Cheng Kung University Electrical Engineering - 陳育政<br />
 
 # Product Name
---Taiwan Stock data collector with Python<br />
+--Taiwan Stock Data Analyzer with Python<br />
 
 # Last Edit Time
 --2022/1/19 12:05<br />
