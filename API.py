@@ -4,11 +4,10 @@ import os
 
 class API:
 
-    def __init__(self, start_date, end_date, title, stock_count):
+    def __init__(self, start_date, end_date, title):
         self.start_date = start_date
         self.end_date = end_date
         self.title = title
-        self.stock_count = stock_count
 
     def show_title(self):
         import os
@@ -90,7 +89,7 @@ class API:
         import twstock.codes
         import time
         i = 0
-        filepath = "C:\\Users\\user\\Desktop\\stock_list.csv"
+        filepath = "C:\\Users\\user\\Desktop\\Stock\\Data\\stock_list.csv"
         file = open(filepath, 'w')
         print(colored("\n>> Taiwan Stocks Scan Start", 'yellow', attrs=['bold']))
         for code in range(1000, 1200):
@@ -115,6 +114,3 @@ class API:
               + colored("full stock list", 'yellow')
               + colored(", go find the ", 'green')
               + colored("stock_list.csv", 'red'))
-
-    # use list and yfinance to get price data
-    def get_stock_price(self):

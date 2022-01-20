@@ -4,8 +4,9 @@
 from API import API
 
 
-API = API("0000-00-00", "0000-00-00", "\n===Yahoo Finance & TWStock API Data Collector===\n", 0)
+API = API("0000-00-00", "0000-00-00", "\n=====TWStock API Stock History Data Collector=====\n")
 API.show_title()
-#API.get_valid_date()
+API.get_valid_date()
 API.get_stock_list()
+API.get_stock_price()
 

@@ -2,7 +2,7 @@
 --National Cheng Kung University EE 113 - 陳育政<br />
 
 # Product Name
---Taiwan Stock API data collector with Python<br />
+--Taiwan Stock data collector with Python<br />
 
 # Last Edit Time
 --2022/1/19 12:05<br />
@@ -16,7 +16,9 @@
 
 # Content
 --main.py (run the program)<br />
---API.py (goto TWStock and yfinance API to collect data)<br />
+--API.py (goto TWStock to collect data)<br />
+--Only get some iconic symbols to check<br />
 
 # Way to Use
 --Used to analyze TWSE stocks<br />
+--Execute main.py<br /> 
