@@ -86,24 +86,35 @@ class API:
                 self.end_date = str(end_year) + '-' + str(end_month) + '-' + str(end_day)
 
     # get full TWSE stock list
-    def get_stock_info(self):
-        import twstock
-        i = 1
-        stock_no = open("one.csv", "w")
-        for code in range(0000, 10000):
-            if str(code) in twstock.codes:
-                print(str(code))
-                i += 1
+    def get_stock_list(self):
+        import twstock.codes
+        import time
+        i = 0
+        filepath = "C:\\Users\\user\\Desktop\\stock_list.csv"
+        file = open(filepath, 'w')
+        print(colored("\n>> Taiwan Stocks Scan Start", 'yellow', attrs=['bold']))
+        for code in range(1000, 1200):
+            # get the full list of stock symbols
+            if code > 1000 and code % 1000 == 0:
+                os.system('color')
+                print(colored(">> Total " + str(code - 1000) + " possible stocks checked", 'green'))
+                if str(code) in twstock.codes:
+                    file.write(str(code) + '\n')
+                    i += 1
+                    time.sleep(.004)
             else:
-                continue
-        stock_no.close()
+                if str(code) in twstock.codes:
+                    file.write(str(code) + '\n')
+                    i += 1
+                    time.sleep(.004)
+        file.close()
+        self.stock_count = i
+        print(colored(">> Taiwan Stocks Scan Complete", 'yellow', attrs=['bold']))
+        print("\n>> Total stock counts: " + colored(str(self.stock_count), 'red'))
+        print(colored(">> If need any ", 'green')
+              + colored("full stock list", 'yellow')
+              + colored(", go find the ", 'green')
+              + colored("stock_list.csv", 'red'))
 
-
+    # use list and yfinance to get price data
     def get_stock_price(self):
-        import twstock
-        stock = twstock.Stock("1592")
-        if stock.price==[]:
-            print("fail")
-        else:
-            print(stock.price)
-

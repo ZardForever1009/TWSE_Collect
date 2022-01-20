@@ -12,10 +12,11 @@
 --Python 3.10.1<br />
 --PyCharm 2021.3.1<br />
 --Yahoo Finance API<br />
+--TWStock API<br />
 
 # Content
 --main.py (run the program)<br />
---API.py (goto TWSE official API to collect data)<br />
+--API.py (goto TWStock and yfinance API to collect data)<br />
 
 # Way to Use
 --Used to analyze TWSE stocks<br />

@@ -3,9 +3,9 @@
 # Creator: Eason Chen of National Cheng Kung University Electrical Engineering
 from API import API
 
-API = API("0000-00-00", "0000-00-00", "\n=====Yahoo Finance API Stock Data Collector=====\n", 0)
+
+API = API("0000-00-00", "0000-00-00", "\n===Yahoo Finance & TWStock API Data Collector===\n", 0)
 API.show_title()
-# API.get_valid_date()
-API.get_stock_info()
-API.get_stock_price()
+#API.get_valid_date()
+API.get_stock_list()
 
