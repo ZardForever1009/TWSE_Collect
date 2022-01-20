@@ -11,14 +11,14 @@
 --Windows 64(bit)<br />
 --Python 3.10.1<br />
 --PyCharm 2021.3.1<br />
---Yahoo Finance API<br />
---TWStock API<br />
+--TWSE official server<br />
 
 # Content
 --main.py (run the program)<br />
---API.py (goto TWStock to collect data)<br />
+--Crawler.py (goto TWSE to collect data)<br />
 --Only get some iconic symbols to check<br />
 
 # Way to Use
 --Used to analyze TWSE stocks<br />
 --Execute main.py<br /> 
+--No foolproof design<br />
