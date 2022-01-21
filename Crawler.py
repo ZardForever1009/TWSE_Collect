@@ -97,8 +97,10 @@ class Crawler:
                 for single_line_data in data:
                     os.system('color')
                     if single_line_data[0] == str(int(self.year[date_index]) - 1911) + "/" + str(temp_month) + "/" + str(temp_day):
-                        temp_high_price_for_comparison.append(single_line_data[4])
-                        temp_low_price_for_comparison.append(single_line_data[5])
+                        temp_high_price_for_comparison.append(float(single_line_data[4]))
+                        temp_low_price_for_comparison.append(float(single_line_data[5]))
+                        print(temp_high_price_for_comparison)
+                        print(temp_low_price_for_comparison)
                     else:
                         continue
                 from time import sleep
@@ -131,8 +133,8 @@ class Crawler:
         print(colored("\n$$$===Final Price Result===$$$", 'yellow', attrs=['bold']))
         for index in range(0, len(self.stock_list)):
             print(colored(("\n>> " + self.stock_list[index]), 'red'))
-            print(colored((">> High price: " + self.high_price[index]), 'green'))
-            print(colored((">> Low price: " + self.low_price[index]), 'green'))
+            print(colored((">> High price: " + str(self.high_price[index])), 'green'))
+            print(colored((">> Low price: " + str(self.low_price[index])), 'green'))
         print(colored("\n$$$===$-$-$-$----$-$-$-$===$$", 'yellow', attrs=['bold']))
 
     def write_data_to_file(self):
@@ -148,5 +150,5 @@ class Crawler:
         for index in range(0, len(self.stock_list)):
             path = "C:\\Users\\user\\Desktop\\Stock\\Data\\" + str(self.stock_list[index]) + ".csv"
             with open(path, 'a') as file:
-                file.write(date + "/" + self.high_price[index] + "/" + self.low_price[index] + "\n")
+                file.write(date + "/" + str(self.high_price[index])+ "/" + str(self.low_price[index]) + "\n")
             file.close()
