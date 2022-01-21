@@ -4,7 +4,7 @@
 from Crawler import Crawler
 
 # stock list
-stock_list = ["2330", "3008", "1101"]
+stock_list = ["2408", "2436", "2449", "3035", "3583", "3532"]
 
 TWSE = Crawler("\n=====TWSE Stock History Data Collector=====\n", stock_list, [], [], [], [], [])
 
