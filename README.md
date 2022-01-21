@@ -2,7 +2,7 @@
 --National Cheng Kung University EE 113 - 陳育政<br />
 
 # Product Name
---Taiwan Stock data collector with Python<br />
+--Taiwan Stock Price Collector with Python<br />
 
 # Last Edit Time
 --2022/1/19 12:05<br />
@@ -21,4 +21,4 @@
 # Way to Use
 --Used to analyze TWSE stocks<br />
 --Execute main.py<br /> 
---No foolproof design<br />
+--Only input Monday date, then will automatically collect data of next five days<br />

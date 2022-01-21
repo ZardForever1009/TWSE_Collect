@@ -4,9 +4,10 @@
 from Crawler import Crawler
 
 # stock list
-stock_list = ['2330']
+stock_list = ["2330"]
 
-TWSE = Crawler("\n=====TWSE Stock History Data Collector=====\n", stock_list, [], [], 0000, 00, 00, 0000, 00, 00)
+TWSE = Crawler("\n=====TWSE Stock History Data Collector=====\n", stock_list, [], [], [], [], [])
 
 TWSE.show_title()
 TWSE.run()
+TWSE.print_data()
