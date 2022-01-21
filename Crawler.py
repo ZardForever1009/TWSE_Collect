@@ -109,7 +109,7 @@ class Crawler:
             self.high_price.append(max(temp_high_price_for_comparison))
             self.low_price.append(min(temp_low_price_for_comparison))
             from time import sleep
-            if company_id != self.stock_list[len(self.stock_list)-1]:
+            if company_id != self.stock_list[len(self.stock_list) - 1]:
                 print(colored("\n>> 5 seconds timeout ...", 'cyan'))
                 sleep(5)
 
@@ -135,5 +135,18 @@ class Crawler:
             print(colored((">> Low price: " + self.low_price[index]), 'green'))
         print(colored("\n$$$===$-$-$-$----$-$-$-$===$$", 'yellow', attrs=['bold']))
 
-
-
+    def write_data_to_file(self):
+        if int(self.month[0]) <= 9:
+            month = "0" + str(self.month[0])
+        else:
+            month = str(self.month[0])
+        if int(self.day[0]) <= 9:
+            day = "0" + str(self.day[0])
+        else:
+            day = str(self.day[0])
+        date = str(self.year[0]) + str(month) + str(day)
+        for index in range(0, len(self.stock_list)):
+            path = "C:\\Users\\user\\Desktop\\Stock\\Data\\" + str(self.stock_list[index]) + ".csv"
+            with open(path, 'a') as file:
+                file.write(date + "/" + self.high_price[index] + "/" + self.low_price[index] + "\n")
+            file.close()

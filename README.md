@@ -5,7 +5,7 @@
 --Taiwan Stock Price Collector with Python<br />
 
 # Last Edit Time
---2022/1/19 12:05<br />
+--2022/1/21 16:30<br />
 
 # Compile Environment
 --Windows 64(bit)<br />
@@ -22,3 +22,5 @@
 --Used to analyze TWSE stocks<br />
 --Execute main.py<br /> 
 --Only input Monday date, then will automatically collect data of next five days<br />
+--The data file store in path-> "C:\Users\user\Desktop\Stock\Data"
+--The name is defined by their own symbols
