@@ -134,7 +134,7 @@ class Crawler:
             print(colored((">> High price: " + str(self.high_price[index])), 'green'))
             print(colored((">> Low price: " + str(self.low_price[index])), 'green'))
         print(colored("\n$$$===$-$-$-$----$-$-$-$===$$\n", 'yellow', attrs=['bold']))
-        print(colored(">> All process are done !!!",'green'),attrs=['bold'])
+        print(colored(">> All process are done !!!", 'green', attrs=['bold']))
 
     def write_data_to_file(self):
         if int(self.month[0]) <= 9:
