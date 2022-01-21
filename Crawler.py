@@ -99,8 +99,6 @@ class Crawler:
                     if single_line_data[0] == str(int(self.year[date_index]) - 1911) + "/" + str(temp_month) + "/" + str(temp_day):
                         temp_high_price_for_comparison.append(float(single_line_data[4]))
                         temp_low_price_for_comparison.append(float(single_line_data[5]))
-                        print(temp_high_price_for_comparison)
-                        print(temp_low_price_for_comparison)
                     else:
                         continue
                 from time import sleep
