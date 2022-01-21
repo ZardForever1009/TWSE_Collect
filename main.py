@@ -2,6 +2,7 @@
 # if Ok, analyze data and save it as well
 # Creator: Eason Chen of National Cheng Kung University Electrical Engineering
 from Crawler import Crawler
+import os
 
 # stock list
 stock_list = ["2408", "2436", "2449", "3035", "3583", "3532"]
@@ -12,3 +13,4 @@ TWSE.show_title()
 TWSE.run()
 TWSE.print_data()
 TWSE.write_data_to_file()
+os.system('pause')
