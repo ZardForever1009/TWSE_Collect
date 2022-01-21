@@ -16,11 +16,11 @@
 # Content
 --main.py (run the program)<br />
 --Crawler.py (goto TWSE to collect data)<br />
---Only get some iconic symbols to check<br />
+--Only get some iconic symbols to check (can be diffrent by changing "stock_list" in main.py)<br />
 
 # Way to Use
 --Used to analyze TWSE stocks<br />
 --Execute main.py<br /> 
 --Only input Monday date, then will automatically collect data of next five days<br />
 --The data file store in path-> "C:\Users\user\Desktop\Stock\Data"
---The name is defined by their own symbols
+--The file name is defined by their own symbols
