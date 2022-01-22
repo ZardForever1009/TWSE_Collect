@@ -147,7 +147,12 @@ class Crawler:
             day = str(self.day[0])
         date = str(self.year[0]) + str(month) + str(day)
         for index in range(0, len(self.stock_list)):
+            import os
+            from stat import S_IREAD, S_IRGRP, S_IROTH, S_IWUSR
             path = "C:\\Users\\user\\Desktop\\Stock\\Data\\" + str(self.stock_list[index]) + ".csv"
+            os.chmod(path, S_IWUSR | S_IREAD)  # This makes the file read/write for the owner
             with open(path, 'a') as file:
                 file.write(date + "/" + str(self.high_price[index]) + "/" + str(self.low_price[index]) + "\n")
             file.close()
+            filename = path
+            os.chmod(filename, S_IREAD | S_IRGRP | S_IROTH)
