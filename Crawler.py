@@ -102,16 +102,16 @@ class Crawler:
                     else:
                         continue
                 from time import sleep
-                print(colored(">> 5 seconds timeout ...", 'cyan'))
-                sleep(5)
+                print(colored(">> 2 seconds timeout ...", 'cyan'))
+                sleep(2)
                 os.system('color')
             print(colored((">> complete getting " + company_id + " data"), 'yellow'))
             self.high_price.append(max(temp_high_price_for_comparison))
             self.low_price.append(min(temp_low_price_for_comparison))
             from time import sleep
             if company_id != self.stock_list[len(self.stock_list) - 1]:
-                print(colored("\n>> 5 seconds timeout ...", 'cyan'))
-                sleep(5)
+                print(colored("\n>> 2 seconds timeout ...", 'cyan'))
+                sleep(2)
 
     def request_data_url(self, company_id, date):
         import urllib.request as req
