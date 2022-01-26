@@ -1,3 +1,4 @@
+# Need to change input for start date & end date for holidays
 # Author
 --National Cheng Kung University EE 113 - 陳育政<br />
 
@@ -21,10 +22,8 @@
 # Way to Use
 --Used to analyze TWSE stocks<br />
 --Execute main.py<br /> 
---Only input Monday date, then will automatically collect data of next five days<br />
 --The data file store in path-> "C:\Users\user\Desktop\Stock\Data"<br />
 --The file name is defined by their own symbols<br />
---Only collect after Friday<br />
 
 # Download link
 #link: https://github.com/ZardForever1009/TWSE_Collect/releases/tag/v1.0.0
