@@ -22,8 +22,8 @@
 --Used to analyze TWSE stocks<br />
 --Execute main.py<br /> 
 --Only input Monday date, then will automatically collect data of next five days<br />
---The data file store in path-> "C:\Users\user\Desktop\Stock\Data"
---The file name is defined by their own symbols
+--The data file store in path-> "C:\Users\user\Desktop\Stock\Data"<br />
+--The file name is defined by their own symbols<br />
 --Only collect after Friday<br />
 
 # Download link
