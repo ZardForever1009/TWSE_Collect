@@ -24,6 +24,7 @@
 --Only input Monday date, then will automatically collect data of next five days<br />
 --The data file store in path-> "C:\Users\user\Desktop\Stock\Data"
 --The file name is defined by their own symbols
+--Only collect after Friday<br />
 
 # Download link
 #link: https://github.com/ZardForever1009/TWSE_Collect/releases/tag/v1.0.0
