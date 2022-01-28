@@ -1,4 +1,3 @@
-# Need to change input for start date & end date for holidays
 # Author
 --National Cheng Kung University EE 113 - 陳育政<br />
 
